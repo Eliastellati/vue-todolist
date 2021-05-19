@@ -19,7 +19,12 @@
         <button v-on:click="addItem">Add to the list</button>
         <ul>
             <li v-for="item in items">
-                <p> {{ item }} </p> <button class="status" @click="doneTodo"><i class="fas fa-check-square"></i></button></li>
+                <p> {{ item }} </p>
+                <div class="btn-container">
+                    <button class="status" @click="doneTodo"><i class="fas fa-check-square"></i></button>
+                    <button class="delete" @click="deleteItem"><i class="fas fa-trash-alt"></i></button>
+                </div>
+            </li>
         </ul>
     </div>
     <script src="script.js"></script>
